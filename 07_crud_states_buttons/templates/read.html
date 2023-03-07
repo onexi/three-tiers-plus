@@ -1,0 +1,26 @@
+<table border = 1>
+    {% for contact in list %}
+    <tr>
+      <td> {{contact[0]}} </td>
+      <td> {{contact[1]}} </td>
+      <td> {{contact[2]}} </td>      
+      <td> 
+        <a href="/contact?first={{contact[0]}}&last={{contact[1]}}&email={{contact[2]}}">
+            <img src="/static/edit.png" width="30"> 
+        </a>
+      </td>
+      <td> 
+        <a href="/delete?email={{contact[2]}}">
+            <img src="/static/delete.png" width="30"> 
+        </a>
+      </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<a href="/new">
+    <img src="/static/add.png" width="30"> add
+</a>    
